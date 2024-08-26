@@ -447,4 +447,8 @@ p {
     transform: translate(0%, -25%);
     -webkit-transform: translate(0%, -25%);
   }
+  .pinWrapper{
+    display: flex;
+    flex-direction: column;
+  }
 }
