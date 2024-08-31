@@ -18,7 +18,7 @@
                 if (window.scrollY > 0) {
                     box.classList.add('move');
                 } else {
-                    box.classList.remove('move');
+                    box.classList.remove( 'move');
                 }
             });
         });
