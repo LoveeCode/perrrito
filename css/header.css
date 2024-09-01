@@ -1,0 +1,139 @@
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    top: 0;
+}
+
+/* Estilos generales de la navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: transparent;  /* Fondo transparente al inicio */
+    opacity: 0;  /* Comienza invisible */
+    transform: translateY(-20px); /* Desplazamiento hacia arriba para efecto de deslizamiento */
+    transition: background-color 0.3s, box-shadow 0.3s, opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+/* Mostrar la navbar después del retraso */
+.navbar.visible {
+    opacity: 1;  /* Visible después de 3 segundos */
+    transform: translateY(0);  /* Desplazamiento a la posición original */
+}
+
+/* Fondo blanco y sombra suave al hacer scroll */
+.navbar.scrolled {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor de navegación */
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+/* Estilo del logo */
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;  /* Color blanco al inicio */
+    transition: color 0.3s;
+}
+
+/* Cambio de color del logo al hacer scroll */
+.navbar.scrolled .logo {
+    color: black;
+}
+
+/* Lista de enlaces */
+.nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+/* Estilo de los elementos de la lista */
+.nav-links li {
+    margin-left: 20px;
+}
+
+/* Estilo de los enlaces */
+.nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    padding: 5px 10px;
+    color: white;  /* Color blanco al inicio */
+    transition: color 0.3s;
+    font-family: "Titillium Web", sans-serif;
+}
+
+.nav-links a:hover {
+    color: #FF69B4; 
+}
+
+/* Cambio de color de los enlaces al hacer scroll */
+.navbar.scrolled .nav-links a {
+    color: black;
+}
+
+/* Estilos RESPONSIVE... */
+
+/* Estilos del menú hamburguesa */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+    transition: 0.4s;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 70px;  /* Ajuste según la altura del navbar */
+        right: -100%;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        transition: right 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+    }
+
+    .nav-links a {
+        font-size: 24px;
+        color: white;
+        text-align: center;
+    }
+
+    .navbar.scrolled .menu-toggle span {
+        background-color: black;  /* Cambiar color de la hamburguesa al hacer scroll */
+    }
+}

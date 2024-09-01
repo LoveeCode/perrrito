@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title> Love Code</title>
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="./css/header.css">
   <link rel="shortcut icon" href="https://www.dzoom.org.es/wp-content/uploads/2018/01/rueda-de-colores-734x733.jpg" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,6 +12,25 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">MiLogo</a>
+            <div class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#home" class="nav-link active">Inicio</a></li>
+                <li><a href="#services" class="nav-link">Servicios</a></li>
+                <li><a href="#about" class="nav-link">Acerca de</a></li>
+                <li><a href="#contact" class="nav-link">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+</header>
   <section class="events-page">
     <div id="section1" class="event">
       <div class="pinWrapper">
@@ -18,7 +38,7 @@
           <h2>Diseño de Identidad Corporativa</h2>
           <p>Desarrollamos la imagen visual de tu empresa, incluyendo logotipos y elementos gráficos, para crear una identidad única y coherente que represente tu marca en todos los medios.</p>
           <div class="btn-ingresar">
-            <a href="#">Ingresar</a>
+            <a href="./identidadC.html">Ingresar</a>
           </div>
         </div>
         <div class="image" id="loaderVideo">
@@ -87,6 +107,7 @@
 <script src='https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js'></script>
 <script src='https://unpkg.com/@studio-freight/lenis@1.0.34/dist/lenis.min.js'></script>
 <script  src="./script/script.js"></script>
+<script src="./script/header.js"></script>
 
 </body>
 </html>

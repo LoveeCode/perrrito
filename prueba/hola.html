@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Cards</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .product-card {
+            border: none;
+            transition: transform 0.3s;
+        }
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        .product-img {
+            height: 250px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .product-details {
+            padding: 15px;
+        }
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #28a745;
+        }
+        .product-old-price {
+            text-decoration: line-through;
+            color: #b0b0b0;
+        }
+        .discount-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: #dc3545;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 50px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        
+        <!-- Producto 1 -->
+        <div class="col-md-4">
+            <div class="card product-card shadow-sm">
+                <div class="position-relative">
+                    <img src="https://via.placeholder.com/400x250" class="card-img-top product-img" alt="Canva 1">
+                    <div class="discount-badge">15% OFF</div>
+                </div>
+                <div class="card-body product-details">
+                    <h5 class="card-title">Canva 1</h5>
+                    <p class="card-text">Descripción del producto Canva 1 con detalles destacados.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="product-price">$85.00</span>
+                        <span class="product-old-price">$100.00</span>
+                    </div>
+                    <a href="https://wa.me/51948747296?text=Hola,%20me%20interesa%20realizar%20el%20pedido%20del%20producto%20Canva%201%20(Código%20P001)." 
+                       class="btn btn-success btn-block mt-3">Realizar Pedido</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-md-4">
+            <div class="card product-card shadow-sm">
+                <div class="position-relative">
+                    <img src="https://via.placeholder.com/400x250" class="card-img-top product-img" alt="Canva 2">
+                    <div class="discount-badge">10% OFF</div>
+                </div>
+                <div class="card-body product-details">
+                    <h5 class="card-title">Canva 2</h5>
+                    <p class="card-text">Descripción del producto Canva 2 con detalles destacados.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="product-price">$90.00</span>
+                        <span class="product-old-price">$100.00</span>
+                    </div>
+                    <a href="https://wa.me/51948747296?text=Hola,%20me%20interesa%20realizar%20el%20pedido%20del%20producto%20Canva%202%20(Código%20P002)." 
+                       class="btn btn-success btn-block mt-3">Realizar Pedido</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-md-4">
+            <div class="card product-card shadow-sm">
+                <div class="position-relative">
+                    <img src="https://via.placeholder.com/400x250" class="card-img-top product-img" alt="Canva 3">
+                    <div class="discount-badge">20% OFF</div>
+                </div>
+                <div class="card-body product-details">
+                    <h5 class="card-title">Canva 3</h5>
+                    <p class="card-text">Descripción del producto Canva 3 con detalles destacados.</p>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <span class="product-price">$80.00</span>
+                        <span class="product-old-price">$100.00</span>
+                    </div>
+                    <a href="https://wa.me/51948747296?text=Hola,%20me%20interesa%20realizar%20el%20pedido%20del%20producto%20Canva%203%20(Código%20P003)." 
+                       class="btn btn-success btn-block mt-3">Realizar Pedido</a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
